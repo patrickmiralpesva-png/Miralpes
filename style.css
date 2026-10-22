@@ -1159,19 +1159,31 @@ a {
 
 }
 .prog span{
-    display: block;
-    width: 50%;
-    border-radius: inherit;
-    background:linear-gradient(90deg, #9F70F5,#C66CFF);
-
-    Transform-origin:left;
-    animation:  progressFill 1.2s ease both;
+     display: block;
+    width: var(--level);
+    height: 100%;
+    background: linear-gradient(90deg,#9F70F5,#C6A5FF);
+    border-radius: 20px;
+    animation: fillBar 1.2s ease-out;
+    transform-origin: left;
 }
+
 .per{
-    flex-shrink: 0;
-    color:#D9C2FF;
-    font-size:11px;
-    font-weight: 500;
+    min-width: 30px;
+    color: #D9C2FF;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: right;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--level);
+    }
 }
 
 .skqot{
